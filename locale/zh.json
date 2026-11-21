@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "GPT-SoVITS 语音回复",
+    "description": "使用本机 GPT-SoVITS 生成语音，在 DSH 设置里选择模型与音色，并将可播放的语音消息嵌入回复。"
+  }
+}

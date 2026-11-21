@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "GPT-SoVITS Voice Replies",
+    "description": "Generate speech with local GPT-SoVITS, choose models and reference audio in DSH settings, and embed compact playable voice messages in replies."
+  }
+}

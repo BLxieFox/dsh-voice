@@ -1,0 +1,56 @@
+{
+  "name": "@local/dsh-voice",
+  "version": "2.1.2",
+  "private": true,
+  "type": "module",
+  "description": "GPT-SoVITS voice replies for DeepSeek Harness, with native settings and compact QQ-style audio bubbles.",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "gpt-sovits",
+    "voice",
+    "tts",
+    "cordis",
+    "plugin"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BLxieFox/dsh-voice.git"
+  },
+  "homepage": "https://github.com/BLxieFox/dsh-voice#readme",
+  "icon": "icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "scripts": {
+    "check": "node --check index.js && node --check client.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}
